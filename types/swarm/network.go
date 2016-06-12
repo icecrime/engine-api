@@ -18,9 +18,9 @@ type ResolutionMode string
 
 const (
 	// ResolutionModeVIP VIP
-	ResolutionModeVIP ResolutionMode = "VIP"
+	ResolutionModeVIP ResolutionMode = "vip"
 	// ResolutionModeDNSRR DNSRR
-	ResolutionModeDNSRR ResolutionMode = "DNSRR"
+	ResolutionModeDNSRR ResolutionMode = "dnsrr"
 )
 
 // PortConfig represents the config of a port.
@@ -31,17 +31,17 @@ type PortConfig struct {
 	PublishedPort uint32             `json:",omitempty"`
 }
 
+// PortConfigProtocol represents the protocol of a port.
+type PortConfigProtocol string
+
 const (
 	// TODO(stevvooe): These should be used generally, not just for PortConfig.
 
 	// PortConfigProtocolTCP TCP
-	PortConfigProtocolTCP PortConfigProtocol = "TCP"
+	PortConfigProtocolTCP PortConfigProtocol = "tcp"
 	// PortConfigProtocolUDP UDP
-	PortConfigProtocolUDP PortConfigProtocol = "UDP"
+	PortConfigProtocolUDP PortConfigProtocol = "udp"
 )
-
-// PortConfigProtocol represents the protocol of a port.
-type PortConfigProtocol string
 
 // EndpointVirtualIP represents the virtual ip of a port.
 type EndpointVirtualIP struct {
